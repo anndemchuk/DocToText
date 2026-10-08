@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline';" />
+  <title>DocToText</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="titlebar">
+      <span class="title">DocToText</span>
+    </header>
+
+    <!-- Screen 1: Upload -->
+    <section id="upload-screen" class="screen active">
+      <div id="drop-zone" class="drop-zone">
+        <div class="drop-zone-icon">📄</div>
+        <p class="drop-zone-title">Drag &amp; drop a file here</p>
+        <p class="drop-zone-subtitle">or</p>
+        <button id="browse-btn" class="btn btn-primary">Browse for a file...</button>
+        <p class="supported-formats">Supports PDF, DOC, DOCX, PPTX, PNG, JPEG</p>
+      </div>
+    </section>
+
+    <!-- Screen 2: Processing -->
+    <section id="processing-screen" class="screen">
+      <div class="processing-box">
+        <div class="spinner"></div>
+        <p id="processing-filename" class="processing-filename"></p>
+        <div class="progress-track">
+          <div id="progress-bar" class="progress-bar"></div>
+        </div>
+        <p id="processing-status" class="processing-status">Starting...</p>
+      </div>
+    </section>
+
+    <!-- Error state -->
+    <section id="error-screen" class="screen">
+      <div class="error-box">
+        <div class="error-icon">⚠️</div>
+        <p class="error-title">Conversion failed</p>
+        <pre id="error-message" class="error-message"></pre>
+        <button id="try-again-btn" class="btn btn-primary">Try another file</button>
+      </div>
+    </section>
+
+    <!-- Screen 3: Result -->
+    <section id="result-screen" class="screen">
+      <div class="result-toolbar">
+        <span id="result-filename" class="result-filename"></span>
+        <div class="result-actions">
+          <button id="copy-btn" class="btn btn-secondary">Copy to Clipboard</button>
+          <button id="save-btn" class="btn btn-secondary">Save as Markdown</button>
+          <button id="new-file-btn" class="btn btn-primary">Convert Another File</button>
+        </div>
+      </div>
+      <p id="warnings-note" class="warnings-note" hidden></p>
+      <textarea id="result-text" class="result-text" readonly spellcheck="false"></textarea>
+      <p id="toast" class="toast" hidden></p>
+    </section>
+  </div>
+
+  <script src="renderer.js"></script>
+</body>
+</html>

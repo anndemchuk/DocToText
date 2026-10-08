@@ -1,0 +1,47 @@
+{
+  "name": "doctotext",
+  "productName": "DocToText",
+  "version": "1.0.0",
+  "description": "Convert PDF, Word, PowerPoint, and image files to plain text and Markdown, fully offline.",
+  "main": "main.js",
+  "author": "Anna",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder"
+  },
+  "dependencies": {
+    "jszip": "^3.10.1",
+    "mammoth": "^1.8.0",
+    "pdfjs-dist": "^4.7.76",
+    "tesseract.js": "^5.1.1",
+    "word-extractor": "^1.0.4"
+  },
+  "devDependencies": {
+    "electron": "^32.1.2",
+    "electron-builder": "^25.1.8"
+  },
+  "build": {
+    "appId": "com.anna.doctotext",
+    "productName": "DocToText",
+    "files": [
+      "main.js",
+      "preload.js",
+      "renderer/**/*",
+      "src/**/*",
+      "assets/**/*",
+      "node_modules/**/*",
+      "!node_modules/**/{CHANGELOG.md,README.md,readme.md,*.d.ts,test,tests,__tests__}"
+    ],
+    "mac": {
+      "category": "public.app-category.productivity",
+      "target": "dmg",
+      "identity": null,
+      "icon": "assets/icon.icns"
+    },
+    "directories": {
+      "output": "dist"
+    }
+  }
+}

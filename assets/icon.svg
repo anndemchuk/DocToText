@@ -1,0 +1,113 @@
+<svg width="1024" height="1024" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFF6E9"/>
+      <stop offset="1" stop-color="#FFE9CC"/>
+    </linearGradient>
+    <linearGradient id="fur" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFA652"/>
+      <stop offset="1" stop-color="#F3781E"/>
+    </linearGradient>
+    <radialGradient id="shadow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#7A3A00" stop-opacity="0.32"/>
+      <stop offset="1" stop-color="#7A3A00" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- background squircle -->
+  <rect x="0" y="0" width="1024" height="1024" rx="229" fill="url(#bg)"/>
+
+  <!-- ground shadow -->
+  <ellipse cx="512" cy="838" rx="240" ry="42" fill="url(#shadow)"/>
+
+  <!-- paper scraps flying -->
+  <g fill="#FDF8ED" stroke="#D8CBB0" stroke-width="4">
+    <polygon points="812,330 848,314 860,346 834,368 806,358" transform="rotate(16 832 340)"/>
+    <polygon points="180,470 213,458 223,488 198,502 176,492" transform="rotate(-14 200 480)"/>
+  </g>
+  <g stroke="#C9BCA0" stroke-width="4" stroke-linecap="round">
+    <line x1="820" y1="334" x2="846" y2="330"/>
+    <line x1="188" y1="474" x2="212" y2="470"/>
+  </g>
+
+  <!-- tail -->
+  <path d="M 754 700 Q 860 660 850 560 Q 844 500 790 500" fill="none" stroke="url(#fur)" stroke-width="58" stroke-linecap="round"/>
+
+  <!-- haunches / sitting body -->
+  <ellipse cx="512" cy="792" rx="236" ry="176" fill="url(#fur)"/>
+  <!-- front paws -->
+  <ellipse cx="424" cy="918" rx="60" ry="42" fill="#FFD9A8"/>
+  <ellipse cx="602" cy="918" rx="60" ry="42" fill="#FFD9A8"/>
+  <ellipse cx="424" cy="912" rx="60" ry="24" fill="url(#fur)"/>
+  <ellipse cx="602" cy="912" rx="60" ry="24" fill="url(#fur)"/>
+
+  <!-- ears -->
+  <polygon points="322,300 372,110 452,296" fill="url(#fur)"/>
+  <polygon points="702,300 652,110 572,296" fill="url(#fur)"/>
+  <polygon points="344,278 378,164 426,272" fill="#FFC9D6"/>
+  <polygon points="680,278 646,164 598,272" fill="#FFC9D6"/>
+
+  <!-- head -->
+  <circle cx="512" cy="486" r="264" fill="url(#fur)"/>
+
+  <!-- forehead tabby stripes -->
+  <g stroke="#D9590B" stroke-width="14" fill="none" stroke-linecap="round" opacity="0.55">
+    <path d="M 452 268 Q 468 232 486 264"/>
+    <path d="M 512 254 L 512 296"/>
+    <path d="M 572 268 Q 556 232 538 264"/>
+    <path d="M 320 420 Q 360 408 392 422"/>
+    <path d="M 632 422 Q 664 408 704 420"/>
+  </g>
+
+  <!-- muzzle patch -->
+  <ellipse cx="512" cy="588" rx="178" ry="116" fill="#FFF3DE"/>
+
+  <!-- eyes -->
+  <ellipse cx="418" cy="462" rx="52" ry="58" fill="#FFFFFF"/>
+  <ellipse cx="606" cy="462" rx="52" ry="58" fill="#FFFFFF"/>
+  <circle cx="418" cy="468" r="36" fill="#B6D94C"/>
+  <circle cx="606" cy="468" r="36" fill="#B6D94C"/>
+  <ellipse cx="418" cy="470" rx="11" ry="34" fill="#231405"/>
+  <ellipse cx="606" cy="470" rx="11" ry="34" fill="#231405"/>
+  <circle cx="428" cy="452" r="8" fill="#FFFFFF"/>
+  <circle cx="616" cy="452" r="8" fill="#FFFFFF"/>
+  <path d="M 366 402 Q 418 378 462 404" stroke="#7A3200" stroke-width="12" fill="none" stroke-linecap="round"/>
+  <path d="M 562 404 Q 606 378 658 402" stroke="#7A3200" stroke-width="12" fill="none" stroke-linecap="round"/>
+
+  <!-- nose -->
+  <polygon points="512,556 494,584 530,584" fill="#F2879B"/>
+
+  <!-- whiskers -->
+  <g stroke="#E0A15C" stroke-width="7" stroke-linecap="round">
+    <line x1="330" y1="580" x2="216" y2="562"/>
+    <line x1="332" y1="604" x2="214" y2="606"/>
+    <line x1="330" y1="628" x2="220" y2="652"/>
+    <line x1="694" y1="580" x2="808" y2="562"/>
+    <line x1="692" y1="604" x2="810" y2="606"/>
+    <line x1="694" y1="628" x2="804" y2="652"/>
+  </g>
+
+  <!-- mouth cavity (open, chomping the paper) -->
+  <path d="M 456 610 Q 512 672 568 610 Q 512 648 456 610 Z" fill="#3A1E10"/>
+  <path d="M 466 614 Q 512 654 558 614 Q 512 636 466 614 Z" fill="#B4544A"/>
+
+  <!-- teeth nibbling the paper -->
+  <g fill="#FFF9EC">
+    <polygon points="474,614 492,614 483,632"/>
+    <polygon points="502,622 520,622 511,640"/>
+    <polygon points="530,614 548,614 539,632"/>
+  </g>
+
+  <!-- paper sticking out of the mouth -->
+  <g transform="rotate(18 610 600)">
+    <path d="M 630 420
+             L 790 420
+             L 790 590
+             L 768 583 L 748 596 L 728 582 L 708 596 L 688 582 L 668 596 L 648 583 L 630 596
+             Z"
+          fill="#FDF8ED" stroke="#DED0AE" stroke-width="5" stroke-linejoin="round"/>
+    <line x1="652" y1="452" x2="768" y2="452" stroke="#C9BCA0" stroke-width="8" stroke-linecap="round"/>
+    <line x1="652" y1="478" x2="768" y2="478" stroke="#C9BCA0" stroke-width="8" stroke-linecap="round"/>
+    <line x1="652" y1="504" x2="742" y2="504" stroke="#C9BCA0" stroke-width="8" stroke-linecap="round"/>
+  </g>
+</svg>
